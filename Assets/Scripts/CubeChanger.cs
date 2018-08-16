@@ -11,6 +11,8 @@ public class CubeChanger : MonoBehaviour {
     public GameObject ObjectToSpawn;
     public AudioSource Boop;
     public float Rotatespeed = 10f;
+    public int activitycount = 0;
+    public int maxactcount = 30;
 
 	// Use this for initialization
 	void Start ()
@@ -35,6 +37,8 @@ public class CubeChanger : MonoBehaviour {
         {
             Function3();
         }
+        activitycount++;
+        Debug.Log(activitycount);
     }
 
      void Function1(Vector3 spawnPoint)
